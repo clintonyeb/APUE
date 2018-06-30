@@ -7,19 +7,19 @@
 
 void dirname_basename(char *filename)
 {
-    printf("  Original filename: %s", filename);
+    printf("    Original filename: %s", filename);
 
     char *copyForDir = strdup(filename);
     char *dir = dirname(copyForDir);
 
-    printf("Directory Name: %s", dir);
+    printf("    Directory Name: %s", dir);
 
     char *copyForBase = strdup(filename);
-    char *base = dirname(copyForBase);
+    char *base = basename(copyForBase);
 
-    printf("Base Name: %s", base);
+    printf("    Base Name: %s", base);
 
-    printf("Reconstructed: %s/%s", dir, base);
+    printf("    Reconstructed: %s/%s", dir, base);
 
     free(copyForBase);
     free(copyForDir);

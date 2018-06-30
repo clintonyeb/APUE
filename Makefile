@@ -3,7 +3,7 @@ PLATFORM=$(shell $(ROOT)/systype.sh)
 include $(ROOT)/Make.defines.$(PLATFORM)
 
 override CFLAGS=-std=c11 -I$(ROOT)/include -Wall -DLINUX -D_GNU_SOURCE $(EXTRA)
-PROGS =	file_type
+PROGS =	mask
 
 all:	$(PROGS)
 
